@@ -1,0 +1,146 @@
+Kuzmin Oleg 
+PhD in Engineering,  
+Associate Professor 
+Sylka Iryna 
+PhD in Engineering, 
+Frolova Natalya 
+Doctor in Engineering,  
+Associate Professor 
+Popovych Anzhela 
+Student, 
+Popovych Victoriia 
+Student 
+Department of Technology of 
+Restaurant and 
+Ayurvedic Products 
+Kyrpichenkova Oksana 
+PhD in Engineering 
+Department of Hotel-Restaurant 
+Business 
+National University of Food 
+Technologies 
+(Kyiv, Ukraine) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ENSURING THE 
+COMPETITIVENESS OF 
+THE RESTAURANT 
+BUSINESS IN UKRAINE IN 
+THE PERIOD COVID-19 
+PANDEMICS 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+In Ukraine, the totality of all catering establishments is united by the concept of “restaurant business”. In a general sense, the restaurant industry is a branch of the national economy, the basis of which are enterprises characterized by the unity of forms, organization of production and customer service, which differ in type and specialization. It should be noted that the use of the above concept in our country officially began in 2004, when it was replaced by the term “catering” and in modern terminology the term “restaurant” means the type of economic activity of economic entities to provide services to meeting the needs of consumers in nutrition with or without leisure (Lee et al., 2013, 2020; Lin et al., 2020) [1, 2, 3]. 
+The restaurant market is one of the most dynamic markets in Ukraine. He is extremely sensitive to the economic situation, exchange rate fluctuations and social factors. 
+In recent decades, the following trends have emerged in the development of restaurants economy: 
+formation of new directions of modern cooking; 
+deepening the specialization of restaurants; 
+creation of international restaurant chains; 
+improvement of forms of labor and implementation of scientific and technological progress. 
+According to rating of the World Bank, Ukraine at the beginning of 2020 was ranked 64th in terms of ease of doing business among 190 countries. It is more difficult than ours to do business, for example, in Greece, Sudan, and Iraq. Instead, our closest neighbors – Belarus, Moldova and Poland – are 49, 48 and 40 steps respectively. Note that a year ago Ukraine was in 71st place in this ranking. 
+Development of the restaurant industry (Kim, Jang, 2018) [4]: 
+gives significant savings to social labor through more rational use of equipment, raw materials, materials; 
+provides workers and employees with hot food during the working day, which increases their efficiency, maintains health; 
+enables the organization of a balanced diet in children's and educational institutions. 
+Ukraine is always gaining momentum in the restaurant industry. New establishments open one after another, while former markets become new. 
+Due to the development of the tourism business, much attention is paid to the forms and methods of providing tourist services in restaurants, hotels, cafes and bars. Knowledge of a foreign language is now a prerequisite for working in a high or luxury institution. 
+The current realities of food and various sectors of the economy are characterized by a difficult situation, as the spread of the threat of COVID-19 has forced to change the activities of all enterprises (Mofijur et al, 2020; Liao, 2016; Kim, Lee, 2020; Chopra, Arora, 2020; Drake et al., 2020) [5-9]. This has changed the focus so much that some markets (such as online trading) have made a significant leap, while others are on the verge of survival (Sharma et al, 2020; Sheth, 2020; Nandi et al, 2020) [10-12]. 
+According to program of Restaurant Automation named of Poster, 2500 Ukrainian institutions have shut down after two-week quarantine. This is 63 % of all the company's customers in Ukraine. Thus, we can assume that there are currently about 30000 institutions in the country. Selling’s of catering establishments in Ukraine from March 23 to 29 decreased by an average of 73 % compared to the same period before quarantine. Selling’s fell sharply not only in the capital (by 78 %), but also in all major regional centers. Thus, in Lviv the figure fell by an average of 78 %, in Kharkiv – by 73 %, in the Dnieper – by 65 %, in Odessa – by 60 %. More than 160000 people lost their jobs in the restaurant business. Poster customers alone currently do not have 13000 employees. 
+Due to the coronavirus pandemic from March to May 2020, a large number of Ukrainian cafes and restaurants were temporarily closed; only some continued to work exclusively in the mode of delivery or issuing orders with them. 
+On the one hand, this has led to an increase in food delivery (20-25 %), but at the same time, due to the declining solvency of Ukrainians, instead of visiting restaurants, many began to prefer home–cooked meals. 
+According to a survey by the Union of Ukrainian Entrepreneurs, as of April 2020, almost 60 % of business owners continue to operate during restrictions (mostly large and medium-sized businesses), another 29 % – have stopped working (typical of microbusiness). At the same time, 51 % of enterprises are able to last only one month, and every fourth business will withstand 2-3 months of work in quarantine conditions and not go bankrupt; 6 % of entrepreneurs completely closed their business, this category included mainly micro and small businesses. Only 3 % of respondents indicate that their business will be able to work for a long time under the necessary conditions (rental vacation, remote access for employees, revision of the business model). One third of business owners (mostly micro-) report a 90-100 % drop in income since the start of quarantine. The same entrepreneurs have already laid off up to 50 % of the staff. Small and medium-sized businesses owners say that incomes have decreased by 25-50 % compared to the period before quarantine and have already laid off 10 to 25 % of employees. Loss of profits of large enterprises is 10-25%, there is a reduction in staff by 25 % by the end of restrictive measures (Shtohrin, 2020) [13]. 
+The survey was also conducted by the Ukrainian Restaurant Association. It obtained the following results: in June 2020, 24 % of institutions in Ukraine worked only on summer playgrounds. 18% worked on the terrace and also delivered. 16 % of respondents said that their establishment worked with delivery and received guests on the terraces and in the hall, and 13 % – that fed guests on the summer terrace and in the halls, but did not deal with delivery. 4 % worked in the hall and for delivery, 6 % only in the hall and 8 % only for delivery and removal. 11 % of respondents said their businesses were completely closed in June. 
+The developer of software for automation of cafes and restaurants Poster provided data on the decline in sales in the field of catering in Ukraine. In July 2020, sales fell by 54 % compared to the same month in 
+2019. At the same time, about half of market participants lost more than 30 %. The analysis was based on anonymous data on sales of 550 food establishments in Ukraine (Figure 3.1). 
+July 2020 to July 2019
+Increased by 10% or more
+Increased by 30%
+Increased by 20% Increased by 10%
+Has not changed
+% fell by 10
+Fell by 20%
+Fell by 30%
+Fell by 40% or more
+ 
+Figure 3.1 Revenue in catering establishments 
+ 
+Thus, according to preliminary data, the pandemic has significantly affected the development of the restaurant business (Mofijur et al., 2020; Kim, Lee, 2020; Chopra, Arora, 2020; Drake et al., 2020; Sharma et al., 2020; Crick, Crick, 2020; He, Harris, 2020; Hiscott et al., 2020) [5, 710, 14-16]. 
+Ukrainian entrepreneurs offer their recovery strategy and “survival” tactics for small and medium-sized businesses, which include: 
+total cost optimization in everything; 
+negotiations on withdrawal/reduction of rent, deferral of loans for the quarantine period; 
+retaining key employees/teams through business reorientation and grants from one’s own pockets; 
+only forced partial dismissal or salary reduction; 
+reorientation/adaptation of business in new conditions (for example, catering establishments for delivery and self-removal; event industry – online events); 
+transfer of business to online formats: management, communication with clients, advertising. 
+It should be noted that any crisis is an opportunity for business transformation and development. During the crisis, consumer preferences and demand will change, new niches for business will appear. It is important not to miss such opportunities for Ukrainian entrepreneurs. 
+The capital is no exception. Catering establishments were forced to adjust to the conditions of anti-epidemic measures in order not to somehow stop economic and business activities. Some carried out reorganizations, while others were not hindered by the new conditions of operation of economic entities and built new facilities. 
+Thus, in Figure 3.2 we can observe the dynamics of development of restaurant facilities in a pandemic in recent months in Kiev. 
+Competition forces business entities not to stop at the achieved level, but to constantly move and self-improvement: to improve the production and sales process, introduce new forms of production organization, progressive wage systems, all this increases productivity and product quality, and thus increases competitiveness. 
+Competitiveness of the restaurant business is an opportunity to form, maintain and use competitive advantages under conditions of variability of the external purpose to take leading positions in the market which offer similar services. 
+The processes taking place in the modern world transform the perception and behavior of customers of restaurant services: they become more careful and demanding to the concept of the product, its content, content, methods of consumption and service. Preference is given to the restaurant that will be able to provide the desired level of service at an affordable price. That is why the restaurant business, wanting to consolidate market positions and ensure profitability, must pay due attention to the development of a system of measures to increase their competitiveness. 
+
+Figure 3.2 Dynamics of development of restaurant facilities in the city of Kyiv in a pandemic according to the POSTEAT editorial office 
+ 
+The level of competitiveness of restaurant business enterprises is influenced by a large number of internal and external factors. It will be more appropriate to focus on the factors that provide the company with advantages over competitors. The presence of these advantages makes it possible to form and ensure a sufficient level of competitiveness in the market in the long run. Competitive advantages are a set of key success factors that differ from rivals, which contribute to ensuring a stable leading competitive position in the market for a certain period (Chiu, Yang, 2018; Cronjé, Plessis, 2020) [17, 18]. The competitive advantage of the enterprise is the result of more efficient than competitors management of processes of formation and development of such qualitative and quantitative properties of a product which are important for the buyer (Saeidi et al, 2018; Rzepka, 2017) [19, 20]. 
+Among the most important competitive advantages can be outlined: the location of the institution; material and technical condition; pricing policy; improving the quality of services; professional development and competence of employees; creation of an effective system of motivation and stimulation of staff work; introduction of loyalty programs taking into account consumer expectations; optimization of acceptable pricing policy; introduction of constant monitoring of the competitive state of the market; application of innovative technologies that will provide the possibility of a unique service; effective organization of marketing policy; development and implementation of additional services (Table 3.6). 
+Competitiveness can be ensured only with a comprehensive approach to the formation of competitive advantages based on new management methods, modern technologies, qualified staff and a high level of service. 
+Thus, the competitiveness of restaurant enterprises is a heavy and difficult struggle in the services market. 
+Hundreds of new restaurants are opened every year, from fast food to themed and highly elite restaurants, therefore it is necessary to pay considerable attention to features of development of the given sphere, and especially the pace and dynamics of its development, to monitor how consumers react to a particular type of restaurant business, to consider in the context of their preferences so as not to suffer damage, and at the same time as much and forced to close. 
+The main criterion for survival became flexibility and the ability to quickly adapt to market conditions. Under the biggest kick are establishments with a large area, with a long time of cooking without delivery. However, an even more important criterion is belonging to one or another restricted area. 
+The restaurant business market has become difficult to predict. However, most of the current anti-crisis trends – for example, the active development of delivery – will give new impetus to market players. Restaurateurs will increasingly reduce costs, optimize business processes, look for their ideal ratio of the cost of food and the price at which it will be sold. Those who overcome the crisis will become much more competitive and successful in the future. 
+In our opinion, the proposed measures for the formation and development of competitive advantages of enterprises will be able to help institutions stay in the restaurant market and have an advantage over others. 
+ 
+References: 
+Lee S., Singal M., Kang K.H. (2013). The corporate social responsibility-financial performance link in the U.S. restaurant industry: Do economic conditions matter? International Journal of Hospitality Management, 32, pp. 2-10. 
+Lee S., Han H., Tariq B. (2020). Corporate social responsibility (CSR) as a customer satisfaction and retention strategy in the chain  
+Table 3.6 Measures for the formation and development of competitive advantages of the restaurant business 
+restaurant sector, Journal of Hospitality and Tourism Management, 45, pp. 348-358. 
+Lin M.S., Song H.J., Lee S. (2020). Formal and informal SME financing in the restaurant industry: The impact of macroenvironment, Journal of Hospitality and Tourism Management, 45, pp. 276-284. 
+Kim H.S., Jang S.C. (2018). Minimum wage increase and firm productivity: Evidence from the restaurant industry, Tourism Management, 71, pp. 378-388. 
+Mofijur M., Fattah I.M.R., Mahlia T.M.I. (2020). Impact of COVID-19 on the social, economic, environmental and energy domains: Lessons learnt from a global pandemic, Sustainable Production and Consumption, 26, pp. 343-359. 
+Liao Z. (2016). Temporal cognition, environmental innovation, and the competitive advantage of enterprises, Journal of Cleaner Production, 135, pp. 1045-1053. 
+Kim J., Lee J.C. (2020). Effects of COVID-19 on preferences for private dining facilities in restaurants, Journal of Hospitality and Tourism Management, 45, pp. 67-70. 
+Chopra K.K., Arora V.K. (2020). Covid-19 and social stigma: Role of scientific community, Indian Journal of Tuberculosis, 67(3), pp. 284285. 
+Drake M., O'Donnell L., Smith R. (2020). An Exploratory Study Investigating COVID-19 Health Safety Measures Using the ARB COVID-19 Restaurant Safety Measure Questionnaire, Arhives of Physical Medicine and Rehabilitation, 101(12), p. e129. 
+Sharma P., Leung T.Y., Cardinali S. (2020). Managing uncertainty during a global pandemic: An international business perspective, Journal of Business Research, 116, pp. 188-192. 
+Sheth J. (2020). Impact of Covid-19 on consumer behavior: Will the old habits return or die? Journal of Business Research, 117, pp. 280-283. 
+Nandi S., Sarkis J., Helms M.M. (2020). Redesigning Supply Chains using Blockchain-Enabled Circular Economy and COVID-19 Experiences, Sustainable Production and Consumption, 27, pp. 10-22. 
+Shtohrin I. (2020). «Vyzhyty u karantyn»: yak riatuietsia malyi i serednii biznes i choho ochikuie vid derzhavy [«Survive in quarantine»: how small and medium-sized businesses are saved and what they expect from the state], Radio svoboda, 2 Apr. p. 6. 
+Crick J.M., Crick D. (2020). Coopetition and COVID-19: 
+Collaborative business-to-business marketing strategies in a pandemic crisis, Industrial Marketing Management, 88, pp. 206-213. 
+He H., Harris L. (2020). The impact of Covid-19 pandemic on corporate social responsibility and marketing philosophy, Journal of Business Research, 116, pp. 176-182. 
+Hiscott J., Alexandridi M., Zevini A. (2020). The global impact of the coronavirus pandemic, Cytokine & Growth Factor Reviews, 53, Pages 1-9. 
+Chiu C.N., Yang C.L. (2018). Competitive advantage and simultaneous mutual influences between information technology adoption and service innovation: Moderating effects of environmental factors, Structural Change and Economic Dynamics, 49, pp. 192-205. 
+Cronjé D.F., Plessis E. (2020). A review on tourism destination competitiveness, Journal of Hospitality and Tourism Management, 45, pp. 256-265. 
+Saeidi P., Saeidi S.P., Mardani A. (2018). The impact of enterprise risk management on competitive advantage by moderating role of information technology, Computer Standards & Interfaces, 63, pp. 6782. 
+Rzepka A. (2017). Inter-organizational Relations as a One of Sources of Competitive Advantage of Contemporary Enterprises in the Era of Globalization, Procedia Engineering, 174, pp. 161-170. 
+ 
+ 
+ 
+ 	 
+ 
+ 
+ 
+ 
+ 
+ 	 
+ 
+ 
+ 
+ 

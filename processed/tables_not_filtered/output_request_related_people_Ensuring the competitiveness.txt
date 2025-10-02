@@ -1,0 +1,56 @@
+Kuzmin Oleg; Sylka Iryna
+Frolova Natalya; Kyrpichenkova Oksana
+Popovych Anzhela; Popovych Victoriia
+Lee; Lin 
+Kim; Jang
+Mofijur; Liao
+Liao; Kim
+Kim; Lee
+Lee; Chopra
+Chopra; Arora
+Arora; Drake
+Drake; Sharma
+Sharma; Sheth
+Sheth; Nandi
+Штохрін; Стохрін 
+Стохрін; Ресторатор 
+Штохрін; Підприємець 
+Підприємець; Ресторатор 
+Стохрін; Підприємець
+Kim; Lee
+Chopra; Arora
+Drake; Crick
+Crick; Crick
+He; Harris
+Mofijur; Kim 
+Sharma; Chopra
+Hiscott; Drake
+Chiu; Yang
+Cronjé; Plessis
+Saeidi; Rzepka
+Lee; Singal
+Lee; Kang
+Lee; Han
+Lee; Tariq
+Lin; Song
+Kim; Jang
+Mofijur; Fattah
+Liao; Kim
+Chopra; Arora
+Drake; O'Donnell
+Sharma; Leung
+Sheth; Nandi
+Crick; Crick
+He; Harris
+Hiscott; Alexandridi 
+Chiu; Yang 
+Mahlia; Mofijur 
+Lee; Kim
+Smith; Drake 
+Cardinali; Sharma 
+Sarkis; Nandi 
+Shtohrin; Helms 
+J.; Sheth
+С Cronjé; Plessis
+С Saeidi; Saeidi 
+С Rzepka; відсутній
