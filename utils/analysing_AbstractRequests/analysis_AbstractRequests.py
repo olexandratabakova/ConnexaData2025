@@ -8,8 +8,6 @@ model = "qwen3:latest"
 def template_request(user_request):
     prompt = (
         f'''Fill in the fields as requested by the user. output a JSON object with:
-        object1: short description (up to 3 words)
-        object2: short description (up to 3 words)
         entities_of_interest: [e.g. "company", "person"]
         relationship_types: [e.g. "leadership", "influence"]
         keywords: list of up to 5 important keywords for the topic.

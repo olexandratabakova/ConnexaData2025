@@ -102,135 +102,15 @@ layout = html.Div(
                             placeholder='Enter task description...',
                             style=text_area_style
                         ),
-                        html.Div(
-                            id='abstract-progress-container',
-                            style={
-                                'display': 'none',
-                                'marginTop': '15px',
-                                'marginBottom': '15px'
-                            },
-                            children=[
-                                html.Div(
-                                    id='abstract-progress-text',
-                                    children="0%",
-                                    style={
-                                        'textAlign': 'center',
-                                        'marginBottom': '5px',
-                                        'fontWeight': 'bold',
-                                        'color': colors['primary']
-                                    }
-                                ),
-                                html.Div(
-                                    id='abstract-progress-bar-placeholder',
-                                    style=progress_bar_placeholder_style,
-                                    children=[
-                                        html.Div(
-                                            id='abstract-progress-bar',
-                                            style={
-                                                'height': '100%',
-                                                'borderRadius': '4px',
-                                                'width': '0%',
-                                                'transition': 'width 0.8s ease',
-                                                'backgroundColor': colors['primary']
-                                            }
-                                        )
-                                    ]
-                                ),
-                                html.Button(
-                                    "Stop Analysis",
-                                    id="abstract-stop-analysis-button",
-                                    style={
-                                        'display': 'none',
-                                        'backgroundColor': '#dc3545',
-                                        'color': 'white',
-                                        'border': 'none',
-                                        'padding': '10px 20px',
-                                        'borderRadius': '5px',
-                                        'cursor': 'pointer',
-                                        'marginTop': '10px',
-                                        'width': '100%'
-                                    }
-                                )
-                            ]
-                        ),
                         html.Button(
                             "Generate Template",
                             id="generate-button",
                             style=button_style
                         ),
                         html.Div(
-                            id='template-prompt-container',
-                            style={
-                                'display': 'none',
-                                'marginTop': '20px',
-                                'padding': '15px',
-                                'backgroundColor': '#f8f9fa',
-                                'borderRadius': '8px',
-                                'border': '1px solid #dee2e6'
-                            },
-                            children=[
-                                html.H5("Шаблонний промпт",
-                                        style={'color': colors['dark_text'], 'marginBottom': '10px'}),
-                                html.Div(id='template-prompt-content', style={'whiteSpace': 'pre-wrap'}),
-                                html.Div(
-                                    style={
-                                        'display': 'flex',
-                                        'justifyContent': 'space-between',
-                                        'marginTop': '15px',
-                                        'gap': '10px'
-                                    },
-                                    children=[
-                                        html.Button("Так, продовжити", id="yes-button", style={
-                                            'backgroundColor': '#28a745',
-                                            'color': 'white',
-                                            'border': 'none',
-                                            'padding': '10px 20px',
-                                            'borderRadius': '5px',
-                                            'cursor': 'pointer',
-                                            'flex': '1'
-                                        }),
-                                        html.Button("Доповнити (у розробці)", id="expand-button", style={
-                                            'backgroundColor': '#ffc107',
-                                            'color': 'black',
-                                            'border': 'none',
-                                            'padding': '10px 20px',
-                                            'borderRadius': '5px',
-                                            'cursor': 'not-allowed',
-                                            'flex': '1'
-                                        }),
-                                        html.Button("Ні, згенерувати знову", id="no-button", style={
-                                            'backgroundColor': '#dc3545',
-                                            'color': 'white',
-                                            'border': 'none',
-                                            'padding': '10px 20px',
-                                            'borderRadius': '5px',
-                                            'cursor': 'pointer',
-                                            'flex': '1'
-                                        })
-                                    ]
-                                )
-                            ]
-                        ),
-                        html.Div(
-                            id='analysis-result-container',
-                            style={'display': 'none', 'marginTop': '25px'},
-                            children=[
-                                html.H4("Результати аналізу",
-                                        style={'color': colors['dark_text'], 'marginBottom': '15px',
-                                               'textAlign': 'center'}),
-                                html.Div(
-                                    id='analysis-result-content',
-                                    style={
-                                        'backgroundColor': '#ffffff',
-                                        'border': '1px solid #dee2e6',
-                                        'borderRadius': '8px',
-                                        'padding': '20px',
-                                        'maxHeight': '400px',
-                                        'overflowY': 'auto',
-                                        'marginBottom': '15px'
-                                    }
-                                )
-                            ]
+                            id="template-prompt",
+                            children="Your future prompt...",
+                            style={**future_prompt_style, 'color': '#6c757d', 'backgroundColor': '#f8f9fa'}
                         )
                     ]
                 ),
@@ -257,7 +137,7 @@ layout = html.Div(
                         ),
                         html.Div(
                             id='document-content',
-                            style=document_content_style,
+                            style={**document_content_style, 'maxHeight': '600px', 'overflowY': 'auto'},
                             children="Select or upload a document to view its content here..."
                         ),
                         html.Div(
@@ -319,7 +199,7 @@ def register_callbacks(app):
 
                 try:
                     result = extract_text_in_order(url_value)
-                    save_to_file(result, url_value, TEXT_DIR)
+                    saved_filename = save_to_file(result, url_value, TEXT_DIR)
                     return no_update, no_update, url_style
 
                 except Exception as e:
@@ -333,6 +213,155 @@ def register_callbacks(app):
                 return no_update, no_update, url_style
 
         raise PreventUpdate
+
+    def create_task_json(task_title, userRequest, selected_file=None, output_dir="processed/json"):
+        try:
+            os.makedirs(output_dir, exist_ok=True)
+
+            safe_filename = task_title.replace(" ", "_").replace("/", "_") + ".json"
+            file_path = os.path.join(output_dir, safe_filename)
+
+            task_data = {
+                "task": task_title,
+                "userRequest": userRequest,
+                "files": [selected_file] if selected_file else [],
+                "tips": "",
+                "relations": [],
+                "created_at": datetime.now().isoformat()
+            }
+
+            with open(file_path, 'w', encoding='utf-8') as f:
+                json.dump(task_data, f, ensure_ascii=False, indent=2)
+
+            return True, file_path
+        except Exception as e:
+            print(f"Помилка при створенні JSON файлу: {e}")
+            return False, str(e)
+
+    def validate_task_inputs(task_name, task_description):
+        if not task_name or not task_name.strip():
+            return False, "Назва таску не може бути порожньою"
+
+        if not task_description or not task_description.strip():
+            return False, "Опис таску не може бути порожнім"
+
+        return True, "OK"
+
+    @app.callback(
+        Output('upload-alert', 'children'),
+        Output('upload-alert', 'color'),
+        Output('upload-alert', 'is_open'),
+        Output('task-name', 'value'),
+        Output('task-description', 'value'),
+        Output('template-prompt', 'children'),
+        Input('generate-button', 'n_clicks'),
+        State('task-name', 'value'),
+        State('task-description', 'value'),
+        State('file-dropdown', 'value'),
+        prevent_initial_call=True
+    )
+    def handle_generate_template(n_clicks, task_name, task_description, selected_file):
+        if not n_clicks:
+            raise PreventUpdate
+
+        is_valid, validation_message = validate_task_inputs(task_name, task_description)
+        if not is_valid:
+            return validation_message, "danger", True, no_update, no_update, no_update
+
+        try:
+            success, result = create_task_json(task_name, task_description, selected_file)
+
+            if success:
+                # одразу додає tips_data замість Tips
+                tips_data = template_request(task_description)
+
+                filename = os.path.basename(result)
+                file_path = os.path.join("processed/json", filename)
+
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    task_data = json.load(f)
+
+                if hasattr(tips_data, 'model_dump'):
+                    tips_dict = tips_data.model_dump()
+                    # Беремо перший елемент списка tips, якщо він є
+                    task_data["tips"] = tips_dict.get("tips", [{}])[0] if tips_dict.get("tips") else {}
+                else:
+                    # Аналогічно для словника
+                    task_data["tips"] = tips_data.get("tips", [{}])[0] if tips_data.get("tips") else {}
+
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    json.dump(task_data, f, ensure_ascii=False, indent=2)
+
+                print("✅ Поля Tips успішно заповнено:")
+
+                # Створюємо контент для шаблонного промпту
+                template_content = []
+
+                # Отримуємо перший елемент з масиву tips для відображення
+                if task_data["tips"] and isinstance(task_data["tips"], dict):
+                    tip = task_data["tips"]
+
+                    # Отримуємо значення для підстановки
+                    entities_of_interest = tip.get('entities_of_interest', [])
+                    relationship_types = tip.get('relation_types', [])
+                    keywords = tip.get('keywords', [])
+
+                    # Формуємо шаблонний промпт
+                    template_prompt = f'''You are an information extraction system.
+
+                Task: From the provided text, extract all relations that match the user's intent.
+
+                Entities: {entities_of_interest}  
+                Relation types: {relationship_types}  
+                Keywords: {keywords}  
+
+                Output JSON fields:  
+                object1, object2, relation_type, polarity, keywords'''
+
+                    # Додаємо шаблонний промпт в інтерфейс
+                    template_content = html.Div([
+                        html.H4("Шаблонний промпт:", style={'marginBottom': '10px', 'color': 'black'}),
+                        html.Pre(
+                            template_prompt,
+                            style={
+                                'whiteSpace': 'pre-wrap',
+                                'wordWrap': 'break-word',
+                                'backgroundColor': '#f8f9fa',
+                                'padding': '15px',
+                                'borderRadius': '5px',
+                                'border': '1px solid #dee2e6',
+                                'color': 'black',
+                                'fontFamily': 'monospace',
+                                'fontSize': '14px',
+                                'lineHeight': '1.4',
+                                'maxHeight': '400px',
+                                'overflowY': 'auto'
+                            }
+                        )
+                    ])
+
+                    # Вивід в консоль для дебагу
+                    print(f"   Entities of interest: {entities_of_interest}")
+                    print(f"   Relationship types: {relationship_types}")
+                    print(f"   Keywords: {keywords}")
+                    print(f"   File name: {selected_file}")
+                else:
+                    template_content = html.Div("Немає даних для відображення", style={'color': 'black'})
+                    print("   Немає даних для відображення")
+
+                message = html.Div([
+                    html.Span("✅ Завдання успішно додано! ", style={'fontWeight': 'bold', 'color': 'black'}),
+                    html.Br(),
+                    html.Span(f"Tips заповнено для: {task_name}", style={'color': 'green'})
+                ])
+                return message, "success", True, "", "", template_content
+            else:
+                return f"❌ Помилка при створенні шаблону: {result}", "danger", True, no_update, no_update, no_update
+
+        except Exception as e:
+            error_message = f"❌ Неочікувана помилка: {str(e)}"
+            print(f"Помилка: {e}")
+            return error_message, "danger", True, no_update, no_update, no_update
 
     @app.callback(
         Output('file-dropdown', 'options', allow_duplicate=True),

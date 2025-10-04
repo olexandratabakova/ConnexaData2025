@@ -240,9 +240,10 @@ future_prompt_style = {
     'minHeight': '80px',
     'marginTop': '15px',
     'padding': '15px',
-    'border': f'2px dashed {colors["gray_border"]}',
+    'border': f'2px solid {colors["gray_border"]}',
     'borderRadius': '8px',
     'backgroundColor': colors['gray_light'],
+    'color': 'gray',
     'display': 'flex',
     'alignItems': 'center',
     'justifyContent': 'center'
