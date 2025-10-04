@@ -4,7 +4,7 @@ from components.nav import NAV_COMPONENT
 from config import FILTERED_OUTPUT_DIR
 from styles.style import common_styles, h1_style, button_style_backtohome, description_style
 from components.dropdown import create_dropdown
-from utils.analysing.statistics_calculations import *
+from utils.analysing_requests.statistics_calculations import *
 logging.basicConfig(level=logging.ERROR)
 
 

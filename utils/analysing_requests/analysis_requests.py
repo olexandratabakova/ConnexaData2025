@@ -2,10 +2,6 @@ from config_keys import api_groq_key, api_openai_key
 from groq import Groq
 from openai import OpenAI
 
-# from ollama import chat
-# from schemas.template_schema import Tips
-# from schemas.relation_schema import RelationList
-
 client_groq = Groq(api_key=api_groq_key)
 client_openai = OpenAI(api_key=api_openai_key)
 

@@ -2,15 +2,12 @@ from dash import dcc, html, callback_context, no_update
 from dash.exceptions import PreventUpdate
 from dash.dependencies import Input, Output, State
 import threading
-import os
 import dash_bootstrap_components as dbc
-import base64
-
-from styles.style import common_styles, h1_style, style_alert_base, description_style, button_style, button_style2, text_content_style, button_style_backtohome
+from styles.document_requests_style import *
 from config import TEXT_FILE_PATH, OUTPUT_DIR, FILTERED_OUTPUT_DIR
 
-from utils.analysing.analysis import *
-from utils.analysing.filtering import filter_row
+from utils.analysing_requests.analysis_requests import *
+from utils.analysing_requests.filtering import filter_row
 from utils.documents.converting_documents import *
 from components.nav import NAV_COMPONENT
 
@@ -22,34 +19,31 @@ selected_model = "llama-3.3-70b-versatile"
 os.makedirs(FILTERED_OUTPUT_DIR, exist_ok=True)
 
 
+
 def get_file_list(directory):
     return [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]
+
 
 file_list = get_file_list(os.path.dirname(TEXT_FILE_PATH))
 
 layout = html.Div(
-    style={**common_styles, 'height': '100vh', 'display': 'flex', 'flexDirection': 'column'},
+    style=layout_style,
     children=[
-        html.H1("ConnexaData", style={**h1_style, 'textAlign': 'center'}),
+        html.H1("ConnexaData", style=h1_centered_style),
         html.Div(children=["This is the document page."], style=description_style),
 
         html.Div(
-            style={'display': 'flex', 'flexDirection': 'row', 'marginTop': '20px', 'flex': '1'},
+            style=main_container_style,
             children=[
                 html.Div(
-                    style={
-                        'flex': '0.7',
-                        'padding': '10px',
-                        'borderRight': '1px solid #ccc',
-                        'backgroundColor': '#f9f9f9'
-                    },
+                    style=left_panel_style,
                     children=[
                         NAV_COMPONENT,
                         dcc.Dropdown(
                             id='file-dropdown',
                             options=[{'label': file, 'value': file} for file in file_list],
                             value=file_list[0] if file_list else None,
-                            style={'width': '100%', 'marginBottom': '20px', 'fontSize': '14px'}
+                            style=dropdown_style
                         ),
                         dcc.Upload(
                             id='upload-file',
@@ -57,18 +51,7 @@ layout = html.Div(
                                 "Drag and Drop or ",
                                 html.A("Select Files", style={'color': '#007acc', 'textDecoration': 'underline'})
                             ]),
-                            style={
-                                'width': '100%',
-                                'height': '60px',
-                                'lineHeight': '60px',
-                                'borderWidth': '1px',
-                                'borderStyle': 'dashed',
-                                'borderRadius': '5px',
-                                'textAlign': 'center',
-                                'margin': '10px 0',
-                                'backgroundColor': 'white',
-                                'color': 'black'
-                            },
+                            style=upload_style,
                             multiple=False,
                             accept='.txt,.pdf,.docx',
                             max_size=5 * 1024 * 1024,
@@ -81,18 +64,18 @@ layout = html.Div(
                             style=style_alert_base
                         ),
                         html.Div(
-                            style={'display': 'flex', 'flexDirection': 'column', 'marginTop': '10px'},
+                            style=button_column_style,
                             children=[
                                 html.Div([
                                     dcc.RadioItems(
                                         id='model-selector',
                                         options=[
                                             {'label': 'llama-3.3-70b-versatile', 'value': 'llama-3.3-70b-versatile'},
-                                            {'label': 'gpt-4o-mini', 'value': 'gpt-4o-mini'}
+                                            {'label': 'gpt-4o-mini', 'value': 'gpt-4o-mini'},
                                         ],
                                         value=selected_model,
-                                        labelStyle={'display': 'block', 'marginBottom': '10px'},
-                                        style = {'textAlign':'left'}
+                                        labelStyle=radio_label_style,
+                                        style=radio_style
                                     )
                                 ]),
                                 html.Button("Find connections between", id="run-analysis-related-button",
@@ -105,28 +88,17 @@ layout = html.Div(
                                             style={**button_style, 'border': 'none', 'marginBottom': '10px'}),
                                 html.Div("Discover related concepts", style={'marginBottom': '20px'}),
                                 html.Button("Stop Analysis", id="stop-analysis-button",
-                                            style={**button_style2, 'border': 'none', 'display': 'none',
-                                                   'marginLeft': '10px'})
+                                            style=stop_button_hidden_style)
                             ]
                         ),
                     ]
                 ),
 
                 html.Div(
-                    style={
-                        'flex': '2.3',
-                        'padding': '10px',
-                        'backgroundColor': 'white'
-                    },
+                    style=right_panel_style,
                     children=[
                         html.Div(
-                            style={
-                                'border': '1px solid #ccc',
-                                'padding': '10px',
-                                'overflow': 'auto',
-                                'maxHeight': '500px',
-                                'backgroundColor': 'white'
-                            },
+                            style=text_container_style,
                             children=[
                                 html.Div(id='text-content', style=text_content_style)
                             ]
@@ -134,7 +106,7 @@ layout = html.Div(
                         html.Div(
                             style={'marginTop': '10px'},
                             children=[
-                                html.Div(id='file-info', style={'fontSize': '14px', 'color': '#555'})
+                                html.Div(id='file-info', style=file_info_style)
                             ]
                         )
                     ]
@@ -144,9 +116,9 @@ layout = html.Div(
 
         html.Div(
             id='progress-container',
-            style={'display': 'none', 'marginTop': '20px'},
+            style=progress_container_style,
             children=[
-                html.Div("Progress:", style={'fontWeight': 'bold'}),
+                html.Div("Progress:", style=progress_label_style),
                 html.Div(id='progress-bar', style={'width': '0%', 'height': '20px', 'backgroundColor': '#007acc'}),
                 html.Div(id='progress-text', style={'marginTop': '10px'})
             ]
@@ -161,13 +133,14 @@ layout = html.Div(
     ]
 )
 
+
 def process_text_chunks(file_path, output_dir, request_function, chunk_size=2400):
     global analysis_running, analysis_stop_event, progress
     analysis_running = True
     progress = 0
     original_filename = os.path.basename(file_path)
     output_filename = f"output_{request_function.__name__}_{original_filename}"
-    output_file = os.path.join(output_dir, output_filename)
+    output_file_path = os.path.join(output_dir, output_filename)
     filtered_output_filename = f"filtered_{output_filename}"
     filtered_output_file = os.path.join(FILTERED_OUTPUT_DIR, filtered_output_filename)
 
@@ -180,7 +153,8 @@ def process_text_chunks(file_path, output_dir, request_function, chunk_size=2400
     if not os.path.exists(FILTERED_OUTPUT_DIR):
         os.makedirs(FILTERED_OUTPUT_DIR)
 
-    with open(output_file, "w", encoding='utf-8') as output_file, open(filtered_output_file, "w", encoding='utf-8') as filtered_file:
+    with open(output_file_path, "w", encoding='utf-8') as output_file, open(filtered_output_file, "w",
+                                                                            encoding='utf-8') as filtered_file:
         total_chunks = len(chunks)
         for i, chunk in enumerate(chunks):
             if analysis_stop_event.is_set():
@@ -191,9 +165,15 @@ def process_text_chunks(file_path, output_dir, request_function, chunk_size=2400
             filtered_result = "\n".join([line for line in result.split("\n") if filter_row(line)])
             filtered_file.write(filtered_result + "\n")
             progress = int((i + 1) / total_chunks * 100)
+
+    if not analysis_stop_event.is_set():
+        progress = 100
+
     analysis_running = False
     analysis_stop_event.clear()
-    return output_file
+    return output_file_path
+
+
 def register_callbacks(app):
     @app.callback(
         [Output('file-dropdown', 'options'),
@@ -259,7 +239,6 @@ def register_callbacks(app):
         content = read_text_file(file_path)
 
         word_count = len(content.split())
-
         file_info = f"File: {selected_file} | Words: {word_count}"
 
         return content, file_info
@@ -269,28 +248,32 @@ def register_callbacks(app):
          Output('progress-bar', 'style'),
          Output('progress-text', 'children'),
          Output('progress-interval', 'disabled'),
-         Output('stop-analysis-button', 'style')],
+         Output('stop-analysis-button', 'style'),
+         Output('text-content', 'children', allow_duplicate=True)],
         [Input('run-analysis-related-button', 'n_clicks'),
          Input('run-analysis-influential-button', 'n_clicks'),
          Input('run-analysis-related-concepts-button', 'n_clicks'),
          Input('stop-analysis-button', 'n_clicks'),
          Input('progress-interval', 'n_intervals')],
-        State('file-dropdown', 'value')
+        [State('file-dropdown', 'value'),
+         State('text-content', 'children')],
+        prevent_initial_call=True
     )
     def update_progress(related_clicks, influential_clicks, related_concepts_clicks, stop_clicks, n_intervals,
-                        selected_file):
+                        selected_file, current_content):
         global analysis_running, progress
 
         ctx = callback_context
         if not ctx.triggered:
-            return {'display': 'none'}, {'width': '0%'}, "0%", True, {'display': 'none'}
+            return progress_container_style, {'width': '0%'}, "0%", True, stop_button_hidden_style, no_update
 
         trigger_id = ctx.triggered[0]['prop_id'].split('.')[0]
 
         if trigger_id in ['run-analysis-related-button', 'run-analysis-influential-button',
                           'run-analysis-related-concepts-button']:
             if not selected_file:
-                return {'display': 'none'}, {'width': '0%'}, "Please select a file first.", True, {'display': 'none'}
+                return progress_container_style, {
+                    'width': '0%'}, "Please select a file first.", True, stop_button_hidden_style, no_update
 
             file_path = os.path.join(os.path.dirname(TEXT_FILE_PATH), selected_file)
             if trigger_id == 'run-analysis-related-button':
@@ -305,25 +288,34 @@ def register_callbacks(app):
 
             analysis_thread.start()
 
-            return {'display': 'block'}, {'width': '0%'}, "0%", False, {'display': 'block', **button_style2}
+            return {'display': 'block'}, {'width': '0%'}, "0%", False, stop_button_visible_style, no_update
 
         elif trigger_id == 'stop-analysis-button':
             if analysis_running:
                 analysis_stop_event.set()
-                return {'display': 'block'}, {'width': '100%',
-                                              'backgroundColor': '#ff4d4d'}, "Analysis stopped by user.", True, {
-                    'display': 'none'}
+                stop_message = f"Все ок, аналіз було на {progress}%"
+                progress_bar_style = {'width': f'{progress}%', 'height': '20px', 'backgroundColor': '#ff4d4d'}
+                return {
+                    'display': 'block'}, progress_bar_style, stop_message, True, stop_button_hidden_style, stop_message
             else:
-                return {'display': 'none'}, {'width': '0%'}, "No analysis is running.", True, {'display': 'none'}
+                return progress_container_style, {
+                    'width': '0%'}, "No analysis is running.", True, stop_button_hidden_style, no_update
 
         elif trigger_id == 'progress-interval':
             if analysis_running:
-                return {'display': 'block'}, {'width': f'{progress}%',
-                                              'backgroundColor': '#007acc'}, f"{progress}%", False, {'display': 'block', **button_style2}
+                progress_bar_style = {'width': f'{progress}%', 'height': '20px', 'backgroundColor': '#007acc'}
+                return {
+                    'display': 'block'}, progress_bar_style, f"{progress}%", False, stop_button_visible_style, no_update
             else:
-                return {'display': 'none'}, {'width': '0%'}, "", True, {'display': 'none'}
+                if progress == 100:
+                    completion_message = "Все проаналізовано"
+                    progress_bar_style = {'width': '100%', 'height': '20px', 'backgroundColor': '#00cc66'}
+                    return {
+                        'display': 'block'}, progress_bar_style, completion_message, True, stop_button_hidden_style, completion_message
+                else:
+                    return progress_container_style, {'width': '0%'}, "", True, stop_button_hidden_style, no_update
 
-        return {'display': 'none'}, {'width': '0%'}, "", True, {'display': 'none'}
+        return progress_container_style, {'width': '0%'}, "", True, stop_button_hidden_style, no_update
 
     @app.callback(
         Output('model-selector', 'value'),
@@ -333,6 +325,5 @@ def register_callbacks(app):
         global selected_model
         selected_model = model
         return selected_model
-
 
     return app
