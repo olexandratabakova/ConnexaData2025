@@ -1,0 +1,172 @@
+{
+  "task": "test1",
+  "userRequest": "пов'язані люди",
+  "files": [],
+  "tips": {
+    "entities_of_interest": [
+      "person"
+    ],
+    "relation_types": [
+      "collaboration",
+      "influence"
+    ],
+    "keywords": [
+      "people",
+      "collaboration",
+      "influence",
+      "network",
+      "connections"
+    ]
+  },
+  "relations": [
+    {
+      "object1": "Зеленський",
+      "object2": "Путін",
+      "relation_type": "influence",
+      "polarity": "neutral",
+      "keywords": [
+        "people",
+        "collaboration",
+        "influence"
+      ]
+    },
+    {
+      "object1": "Зеленський",
+      "object2": "Трамп",
+      "relation_type": "collaboration",
+      "polarity": "positive",
+      "keywords": [
+        "people",
+        "collaboration",
+        "network"
+      ]
+    },
+    {
+      "object1": "Рубіо",
+      "object2": "Зеленський",
+      "relation_type": "influence",
+      "polarity": "positive",
+      "keywords": [
+        "people",
+        "influence",
+        "connections"
+      ]
+    },
+    {
+      "object1": "Росія",
+      "object2": "Україна",
+      "relation_type": "network",
+      "polarity": "neutral",
+      "keywords": [
+        "network",
+        "connections"
+      ]
+    },
+    {
+      "object1": "Зеленський",
+      "object2": "Рубіо",
+      "relation_type": "collaboration",
+      "polarity": "positive",
+      "keywords": [
+        "people",
+        "collaboration",
+        "network"
+      ]
+    },
+    {
+      "object1": "Дональд Трамп",
+      "object2": "Володимир Зеленський",
+      "relation_type": "collaboration",
+      "polarity": "positive",
+      "keywords": [
+        "зустріч",
+        "переговори"
+      ]
+    },
+    {
+      "object1": "Дональд Трамп",
+      "object2": "Володимир Путін",
+      "relation_type": "influence",
+      "polarity": "neutral",
+      "keywords": [
+        "телефон",
+        "розмови"
+      ]
+    },
+    {
+      "object1": "Володимир Зеленський",
+      "object2": "Володимир Путін",
+      "relation_type": "conflict",
+      "polarity": "negative",
+      "keywords": [
+        "війна",
+        "розбіжності"
+      ]
+    },
+    {
+      "object1": "Дональд Трамп",
+      "object2": "Європейські лідери",
+      "relation_type": "collaboration",
+      "polarity": "positive",
+      "keywords": [
+        "зустріч",
+        "координація"
+      ]
+    },
+    {
+      "object1": "Росія",
+      "object2": "Україна",
+      "relation_type": "conflict",
+      "polarity": "negative",
+      "keywords": [
+        "війна",
+        "розбіжності"
+      ]
+    },
+    {
+      "object1": "Путін",
+      "object2": "Трамп",
+      "relation_type": "collaboration",
+      "polarity": "positive",
+      "keywords": [
+        "people",
+        "collaboration",
+        "influence"
+      ]
+    },
+    {
+      "object1": "Трамп",
+      "object2": "Зеленський",
+      "relation_type": "influence",
+      "polarity": "positive",
+      "keywords": [
+        "people",
+        "influence",
+        "network"
+      ]
+    },
+    {
+      "object1": "Путін",
+      "object2": "Зеленський",
+      "relation_type": "negotiation",
+      "polarity": "positive",
+      "keywords": [
+        "people",
+        "collaboration",
+        "connections"
+      ]
+    },
+    {
+      "object1": "Росія",
+      "object2": "Україна",
+      "relation_type": "conflict",
+      "polarity": "negative",
+      "keywords": [
+        "people",
+        "network",
+        "influence"
+      ]
+    }
+  ],
+  "created_at": "2025-10-05T21:38:19.774882"
+}

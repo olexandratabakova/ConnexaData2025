@@ -1,0 +1,344 @@
+{
+  "task": "test2",
+  "userRequest": "пов'язані медійні особистості",
+  "files": [
+    "bbc_com_ukrainian_articles_c78zx910v34.txt"
+  ],
+  "tips": {
+    "tips": [
+      {
+        "entities_of_interest": [
+          "person"
+        ],
+        "relation_types": [
+          "collaboration",
+          "influence"
+        ],
+        "keywords": [
+          "media",
+          "personalities",
+          "influence",
+          "collaboration",
+          "communication"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "object1": "Дональд Трамп",
+      "object2": "Володимир Зеленський",
+      "relation_type": "переговори",
+      "polarity": "positive",
+      "keywords": [
+        "переговори",
+        "Вашингтон",
+        "Білий дім"
+      ]
+    },
+    {
+      "object1": "Дональд Трамп",
+      "object2": "Володимир Зеленський",
+      "relation_type": "гарантії безпеки",
+      "polarity": "positive",
+      "keywords": [
+        "гарантії безпеки",
+        "Україна",
+        "Європа"
+      ]
+    },
+    {
+      "object1": "Володимир Зеленський",
+      "object2": "Путін",
+      "relation_type": "переговори",
+      "polarity": "neutral",
+      "keywords": [
+        "територіальні питання",
+        "переговори"
+      ]
+    },
+    {
+      "object1": "Дональд Трамп",
+      "object2": "Володимир Зеленський",
+      "relation_type": "компліменти",
+      "polarity": "positive",
+      "keywords": [
+        "компліменти",
+        "взаємні компліменти"
+      ]
+    },
+    {
+      "object1": "Кір Стармер",
+      "object2": "Володимир Зеленський",
+      "relation_type": "рада",
+      "polarity": "positive",
+      "keywords": [
+        "рада",
+        "етикет",
+        "дипломатія"
+      ]
+    },
+    {
+      "object1": "Україна",
+      "object2": "Росія",
+      "relation_type": "конфлікт",
+      "polarity": "negative",
+      "keywords": [
+        "війна",
+        "територіальні поступки"
+      ]
+    },
+    {
+      "object1": "Дональд Трамп",
+      "object2": "Володимир Путін",
+      "relation_type": "зустріч",
+      "polarity": "neutral",
+      "keywords": [
+        "Анкоридж",
+        "компроміс"
+      ]
+    },
+    {
+      "object1": "Україна",
+      "object2": "США",
+      "relation_type": "дипломатичні відносини",
+      "polarity": "positive",
+      "keywords": [
+        "підтримка",
+        "діалог"
+      ]
+    },
+    {
+      "object1": "Володимир Зеленський",
+      "object2": "Дональд Трамп",
+      "relation_type": "комунікація",
+      "polarity": "positive",
+      "keywords": [
+        "розуміння",
+        "спроба знайти рішення"
+      ]
+    },
+    {
+      "object1": "Росія",
+      "object2": "Україна",
+      "relation_type": "військова агресія",
+      "polarity": "negative",
+      "keywords": [
+        "війна",
+        "окуповані території"
+      ]
+    },
+    {
+      "object1": "Україна",
+      "object2": "Трамп",
+      "relation_type": "демонструвати силу",
+      "polarity": "positive",
+      "keywords": [
+        "карти",
+        "переговори"
+      ]
+    },
+    {
+      "object1": "Україна",
+      "object2": "Росія",
+      "relation_type": "конфлікт",
+      "polarity": "negative",
+      "keywords": [
+        "війна",
+        "атака"
+      ]
+    },
+    {
+      "object1": "Україна",
+      "object2": "Європа",
+      "relation_type": "підтримка",
+      "polarity": "positive",
+      "keywords": [
+        "Європа",
+        "гарантією безпеки"
+      ]
+    },
+    {
+      "object1": "Трамп",
+      "object2": "Україна",
+      "relation_type": "переговори",
+      "polarity": "neutral",
+      "keywords": [
+        "переговори",
+        "Білий дім"
+      ]
+    },
+    {
+      "object1": "Росія",
+      "object2": "Україна",
+      "relation_type": "агресія",
+      "polarity": "negative",
+      "keywords": [
+        "атака",
+        "дрони"
+      ]
+    },
+    {
+      "object1": "Україна",
+      "object2": "ЗМІ",
+      "relation_type": "повідомлення",
+      "polarity": "positive",
+      "keywords": [
+        "крилата ракета",
+        "Фламінго"
+      ]
+    },
+    {
+      "object1": "Зеленський",
+      "object2": "Трамп",
+      "relation_type": "переговори",
+      "polarity": "positive",
+      "keywords": [
+        "безпека України",
+        "гарантії безпеки"
+      ]
+    },
+    {
+      "object1": "Україна",
+      "object2": "США",
+      "relation_type": "гарантії безпеки",
+      "polarity": "positive",
+      "keywords": [
+        "розміщення військ",
+        "обмін розвідданими",
+        "озброєння"
+      ]
+    },
+    {
+      "object1": "Трамп",
+      "object2": "Зеленський",
+      "relation_type": "підтримка",
+      "polarity": "positive",
+      "keywords": [
+        "велика допомога",
+        "європейські військові"
+      ]
+    },
+    {
+      "object1": "Росія",
+      "object2": "Україна",
+      "relation_type": "напад",
+      "polarity": "negative",
+      "keywords": [
+        "військові союзи",
+        "Заходом"
+      ]
+    },
+    {
+      "object1": "США",
+      "object2": "Україна",
+      "relation_type": "розвіддані",
+      "polarity": "positive",
+      "keywords": [
+        "обмін розвідданими",
+        "американська розвідка"
+      ]
+    },
+    {
+      "object1": "Трамп",
+      "object2": "Зеленський",
+      "relation_type": "угода",
+      "polarity": "positive",
+      "keywords": [
+        "рідкісноземельних металів",
+        "гарантією безпеки"
+      ]
+    },
+    {
+      "object1": "Дональд Трамп",
+      "object2": "Володимир Путін",
+      "relation_type": "телефонний розмов",
+      "polarity": "neutral",
+      "keywords": [
+        "телефон",
+        "розмова"
+      ]
+    },
+    {
+      "object1": "Трамп",
+      "object2": "Путін",
+      "relation_type": "переговори",
+      "polarity": "positive",
+      "keywords": [
+        "переговори",
+        "зустріч"
+      ]
+    },
+    {
+      "object1": "Володимир Зеленський",
+      "object2": "європейські лідери",
+      "relation_type": "підтримка",
+      "polarity": "positive",
+      "keywords": [
+        "підтримка",
+        "європейські лідери"
+      ]
+    },
+    {
+      "object1": "Юрій Ушаков",
+      "object2": "Володимир Зеленський",
+      "relation_type": "розбіжності",
+      "polarity": "negative",
+      "keywords": [
+        "розбіжності",
+        "обережність"
+      ]
+    },
+    {
+      "object1": "Фрідріх Мерц",
+      "object2": "Дональд Трамп",
+      "relation_type": "узгодження",
+      "polarity": "positive",
+      "keywords": [
+        "узгодження",
+        "переговори"
+      ]
+    },
+    {
+      "object1": "Путін",
+      "object2": "Трамп",
+      "relation_type": "переговори",
+      "polarity": "neutral",
+      "keywords": [
+        "переговори",
+        "зустріч"
+      ]
+    },
+    {
+      "object1": "Українські вʼязні",
+      "object2": "фронт",
+      "relation_type": "participation",
+      "polarity": "neutral",
+      "keywords": [
+        "Українські вʼязні",
+        "фронт"
+      ]
+    },
+    {
+      "object1": "Валентин Манько",
+      "object2": "штурмових військ",
+      "relation_type": "leadership",
+      "polarity": "neutral",
+      "keywords": [
+        "Валентин Манько",
+        "штурмових військ"
+      ]
+    },
+    {
+      "object1": "втрати",
+      "object2": "ті, хто воює",
+      "relation_type": "causality",
+      "polarity": "negative",
+      "keywords": [
+        "втрати",
+        "ті, хто воює"
+      ]
+    }
+  ],
+  "created_at": "2025-10-05T23:52:05.372230"
+}

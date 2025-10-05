@@ -325,7 +325,7 @@ document_content_style = {
     'fontSize': '16px',
     'whiteSpace': 'pre-wrap',
     'textAlign': 'left',
-    'height': 'calc(100vh - 250px)',  # Адаптивна висота
+    'height': 'auto',
     'minHeight': '400px',
     'overflowY': 'auto',
     'padding': '15px',
@@ -346,7 +346,7 @@ output_panel_style = {
     'display': 'flex',
     'flexDirection': 'column',
     'boxSizing': 'border-box',
-    'minHeight': '600px'
+    'height': '600px'
 }
 
 # Оновлені стилі заголовка документа
@@ -357,4 +357,35 @@ document_title_style = {
     'fontWeight': '600',
     'textAlign': 'left',
     'flex': '1'
+}
+
+action_buttons_style = {
+    'display': 'flex',
+    'gap': '10px',
+    'marginTop': '15px',
+    'justifyContent': 'center'
+}
+
+action_button_style_enabled = {
+    'padding': '10px 20px',
+    'backgroundColor': colors['primary'],
+    'color': 'white',
+    'border': 'none',
+    'borderRadius': '5px',
+    'cursor': 'pointer',
+    'fontSize': '14px',
+    'fontWeight': 'bold',
+    'transition': 'all 0.3s ease'
+}
+
+action_button_style_disabled = {
+    'padding': '10px 20px',
+    'backgroundColor': '#cccccc',
+    'color': '#666666',
+    'border': 'none',
+    'borderRadius': '5px',
+    'cursor': 'not-allowed',
+    'fontSize': '14px',
+    'fontWeight': 'bold',
+    'transition': 'all 0.3s ease'
 }
