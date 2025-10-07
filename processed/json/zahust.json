@@ -1,0 +1,272 @@
+{
+  "task": "zahust",
+  "userRequest": "Розкажи про вплив організацій та людей у моїх текстах",
+  "files": [
+    "protestu_nabu_sap.txt"
+  ],
+  "tips": {
+    "tips": [
+      {
+        "entities_of_interest": [
+          "company",
+          "person"
+        ],
+        "relation_types": [
+          "leadership",
+          "influence"
+        ],
+        "keywords": [
+          "organization",
+          "influence",
+          "leadership",
+          "impact",
+          "decision"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "object1": "НАБУ",
+      "object2": "СБУ",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "антикорупційна інфраструктура",
+        "переслідування"
+      ]
+    },
+    {
+      "object1": "Руслан Стефанчук",
+      "object2": "фракція \"Слуги народу\"",
+      "relation_type": "leadership",
+      "polarity": "positive",
+      "keywords": [
+        "спікер",
+        "ухвалення закону"
+      ]
+    },
+    {
+      "object1": "Іванна Климпуш-Цинцадзе",
+      "object2": "влада",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "руйнування антикорупційної інфраструктури",
+        "критика"
+      ]
+    },
+    {
+      "object1": "Семен Кривонос",
+      "object2": "СБУ",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "застосування сили",
+        "обшуки"
+      ]
+    },
+    {
+      "object1": "Павло Демчук",
+      "object2": "ухвалення законопроєкту",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "переслідування",
+        "антикорупційні заходи"
+      ]
+    },
+    {
+      "object1": "НАБУ",
+      "object2": "Семен Кривонос",
+      "relation_type": "leadership",
+      "polarity": "neutral",
+      "keywords": [
+        "НАБУ",
+        "Директор"
+      ]
+    },
+    {
+      "object1": "САП",
+      "object2": "Олександр Клименко",
+      "relation_type": "leadership",
+      "polarity": "neutral",
+      "keywords": [
+        "САП",
+        "голова"
+      ]
+    },
+    {
+      "object1": "Президент",
+      "object2": "НАБУ",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "підписувати",
+        "закон",
+        "ограничення"
+      ]
+    },
+    {
+      "object1": "Генпрокурор",
+      "object2": "НАБУ",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "витребувати",
+        "документи",
+        "прокурори"
+      ]
+    },
+    {
+      "object1": "Павло Демчук",
+      "object2": "Президент",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "гальмуватимуться",
+        "справи",
+        "влада"
+      ]
+    },
+    {
+      "object1": "Європейський Союз",
+      "object2": "Україна",
+      "relation_type": "influence",
+      "polarity": "positive",
+      "keywords": [
+        "підтримка",
+        "фінансова допомога",
+        "антикорупційна політика"
+      ]
+    },
+    {
+      "object1": "Максим Бужанський",
+      "object2": "президентська партія \"Слуга народу\"",
+      "relation_type": "leadership",
+      "polarity": "neutral",
+      "keywords": [
+        "президентська партія",
+        "лідер"
+      ]
+    },
+    {
+      "object1": "Верховна Рада України",
+      "object2": "законопроєкт № 12414",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "законопроєкт",
+        "влада",
+        "вплив"
+      ]
+    },
+    {
+      "object1": "генпрокурор",
+      "object2": "НАБУ",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "генпрокурор",
+        "НАБУ",
+        "контроль"
+      ]
+    },
+    {
+      "object1": "САП",
+      "object2": "Офіс генерального прокурора",
+      "relation_type": "leadership",
+      "polarity": "neutral",
+      "keywords": [
+        "САП",
+        "Офіс генерального прокурора",
+        "лідерство"
+      ]
+    },
+    {
+      "object1": "Зеленський",
+      "object2": "НАБУ",
+      "relation_type": "leadership",
+      "polarity": "positive",
+      "keywords": [
+        "президент",
+        "антикорупційні органи"
+      ]
+    },
+    {
+      "object1": "Зеленський",
+      "object2": "САП",
+      "relation_type": "leadership",
+      "polarity": "positive",
+      "keywords": [
+        "президент",
+        "антикорупційні органи"
+      ]
+    },
+    {
+      "object1": "НАБУ",
+      "object2": "САП",
+      "relation_type": "influence",
+      "polarity": "neutral",
+      "keywords": [
+        "антикорупційні органи",
+        "законопроєкт"
+      ]
+    },
+    {
+      "object1": "Зеленський",
+      "object2": "українське суспільство",
+      "relation_type": "influence",
+      "polarity": "positive",
+      "keywords": [
+        "президент",
+        "думка суспільства"
+      ]
+    },
+    {
+      "object1": "Ярослав Железняк",
+      "object2": "НАБУ/САП",
+      "relation_type": "leadership",
+      "polarity": "positive",
+      "keywords": [
+        "виступав",
+        "проти змін",
+        "законопроєкт"
+      ]
+    },
+    {
+      "object1": "Таміла Ташева",
+      "object2": "антикорупційні органи",
+      "relation_type": "influence",
+      "polarity": "positive",
+      "keywords": [
+        "готова голосувати",
+        "за новий законопроєкт",
+        "виправляти"
+      ]
+    },
+    {
+      "object1": "Жан Беленюк",
+      "object2": "НАБУ і САП",
+      "relation_type": "leadership",
+      "polarity": "negative",
+      "keywords": [
+        "Помилився",
+        "відчуваю особисту відповідальність",
+        "виправити ситуацію"
+      ]
+    },
+    {
+      "object1": "протестувальники",
+      "object2": "уряд",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "протестують",
+        "проти скандального законопроєкту",
+        "припинять мітингувати"
+      ]
+    }
+  ],
+  "created_at": "2025-10-07T09:37:49.659503"
+}
