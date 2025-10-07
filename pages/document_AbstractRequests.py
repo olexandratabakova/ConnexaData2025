@@ -34,7 +34,7 @@ analysis_running_abstract = False
 analysis_stop_event_abstract = threading.Event()
 progress_abstract = 0
 selected_file_abstract = ""
-selected_model = "llama-3.3-70b-versatile"
+selected_model = ""
 
 
 def get_file_list(directory):
@@ -70,9 +70,15 @@ def create_template_prompt_content(tips_data):
     if not tips_data or not isinstance(tips_data, dict):
         return html.Div("No data to display", style={'color': 'black'})
 
-    entities_of_interest = tips_data.get('entities_of_interest', [])
-    relationship_types = tips_data.get('relationship_types', [])
-    keywords = tips_data.get('keywords', [])
+    # Отримуємо перший елемент з масиву tips, якщо він існує
+    if 'tips' in tips_data and isinstance(tips_data['tips'], list) and len(tips_data['tips']) > 0:
+        tips_content = tips_data['tips'][0]
+    else:
+        tips_content = tips_data
+
+    entities_of_interest = tips_content.get('entities_of_interest', [])
+    relationship_types = tips_content.get('relation_types', [])
+    keywords = tips_content.get('keywords', [])
 
     template_prompt = f'''You are an information extraction system.
 
@@ -158,9 +164,15 @@ def process_text_chunks_abstract(file_path, output_dir, tips_data, selected_mode
         if not os.path.exists(FILTERED_OUTPUT_DIR):
             os.makedirs(FILTERED_OUTPUT_DIR)
 
-        entities_of_interest = tips_data.get('entities_of_interest', [])
-        relationship_types = tips_data.get('relationship_types', [])
-        keywords = tips_data.get('keywords', [])
+        # Отримуємо дані з правильної структури
+        if 'tips' in tips_data and isinstance(tips_data['tips'], list) and len(tips_data['tips']) > 0:
+            tips_content = tips_data['tips'][0]
+        else:
+            tips_content = tips_data
+
+        entities_of_interest = tips_content.get('entities_of_interest', [])
+        relationship_types = tips_content.get('relation_types', [])
+        keywords = tips_content.get('keywords', [])
 
         all_relations = []  # Збираємо всі зв'язки тут
 
@@ -313,9 +325,22 @@ layout = html.Div(
                         ),
                         html.Div(
                             id="template-prompt",
-                            children="Your future prompt...",
-                            style={**future_prompt_style, 'color': '#6c757d', 'backgroundColor': '#f8f9fa'}
+                            children=html.Div("Your future prompt...",
+                                              style={'color': '#6c757d', 'backgroundColor': '#f8f9fa'}),
+                            style=future_prompt_style
                         ),
+                        html.Div([
+                            dcc.RadioItems(
+                                id='model-selector',
+                                options=[
+                                    {'label': 'llama-3.3-70b-versatile (fast)', 'value': 'llama-3.3-70b-versatile'},
+                                    {'label': 'qwen3:latest (slower)', 'value': 'qwen3:latest'},
+                                ],
+                                value=selected_model,
+                                labelStyle=radio_label_style,
+                                style=radio_style
+                            )
+                        ]),
                         html.Div(
                             id="action-buttons",
                             style=action_buttons_style,
@@ -340,18 +365,7 @@ layout = html.Div(
                                 )
                             ]
                         ),
-                        html.Div([
-                            dcc.RadioItems(
-                                id='model-selector',
-                                options=[
-                                    {'label': 'llama-3.3-70b-versatile (fast)', 'value': 'llama-3.3-70b-versatile'},
-                                    {'label': 'qwen3:latest (slower)', 'value': 'qwen3:latest'},
-                                ],
-                                value=selected_model,
-                                labelStyle=radio_label_style,
-                                style=radio_style
-                            )
-                        ]),
+
                         html.Div(
                             id='progress-container-abstract',
                             style={'display': 'none', 'marginTop': '20px'},

@@ -238,7 +238,7 @@ new_content_container_style = {
 
 future_prompt_style = {
     'minHeight': '80px',
-    'marginTop': '15px',
+    'margin': '15px 0',
     'padding': '15px',
     'border': f'2px solid {colors["gray_border"]}',
     'borderRadius': '8px',
@@ -361,9 +361,9 @@ document_title_style = {
 
 action_buttons_style = {
     'display': 'flex',
-    'gap': '10px',
-    'marginTop': '15px',
-    'justifyContent': 'center'
+    'gap': '30px',
+    'margin': '15px 0',
+    'justifyContent': 'space-between'
 }
 
 action_button_style_enabled = {
@@ -375,13 +375,16 @@ action_button_style_enabled = {
     'cursor': 'pointer',
     'fontSize': '14px',
     'fontWeight': 'bold',
-    'transition': 'all 0.3s ease'
+    'transition': 'all 0.3s ease',
+    'minWidth': '250px',
+
 }
 
 action_button_style_disabled = {
-    'padding': '10px 20px',
+    'padding': '12px 20px',
     'backgroundColor': '#cccccc',
     'color': '#666666',
+    'minWidth': '250px',
     'border': 'none',
     'borderRadius': '5px',
     'cursor': 'not-allowed',
