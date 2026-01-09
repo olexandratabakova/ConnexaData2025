@@ -11,11 +11,21 @@ client_openai = OpenAI(api_key=api_openai_key)
 # Модель за замовчуванням для генерації шаблонів
 default_model = "qwen3:latest"
 
+def safe_relation_list_parse(raw_json: str) -> RelationList:
+    import json
+    data = json.loads(raw_json)
+
+    if isinstance(data, dict) and "relations" not in data:
+        data = {"relations": [data]}
+
+    return RelationList.model_validate(data)
 
 def get_client(model):
     """Повертає клієнта для вибраної моделі"""
     if model == "llama-3.3-70b-versatile":
         return client_groq
+    elif model == "gpt-4o-mini-2024-07-18":
+        return client_openai
     elif model == "qwen3:latest":
         # Для Ollama моделей використовуємо інший підхід
         return "ollama"
@@ -97,4 +107,4 @@ def request(user_text, entities_of_interest, relationship_types, keywords, selec
         )
 
         result_text = chat_completion.choices[0].message.content.strip()
-        return RelationList.model_validate_json(result_text)
+        return safe_relation_list_parse(result_text)

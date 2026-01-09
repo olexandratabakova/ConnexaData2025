@@ -27,244 +27,629 @@
   },
   "relations": [
     {
-      "object1": "НАБУ",
-      "object2": "СБУ",
-      "relation_type": "influence",
-      "polarity": "negative",
+      "object1": "НАТО",
+      "object2": "Україна",
+      "relation_type": "leadership",
+      "polarity": "neutral",
       "keywords": [
-        "антикорупційна інфраструктура",
-        "переслідування"
+        "організація",
+        "лідерство"
       ]
     },
     {
-      "object1": "Руслан Стефанчук",
-      "object2": "фракція \"Слуги народу\"",
+      "object1": "Єнс Столтенберг",
+      "object2": "НАТО",
       "relation_type": "leadership",
       "polarity": "positive",
       "keywords": [
-        "спікер",
-        "ухвалення закону"
+        "лідерство",
+        "вплив"
       ]
     },
     {
-      "object1": "Іванна Климпуш-Цинцадзе",
-      "object2": "влада",
+      "object1": "Україна",
+      "object2": "НАТО",
       "relation_type": "influence",
-      "polarity": "negative",
-      "keywords": [
-        "руйнування антикорупційної інфраструктури",
-        "критика"
-      ]
-    },
-    {
-      "object1": "Семен Кривонос",
-      "object2": "СБУ",
-      "relation_type": "influence",
-      "polarity": "negative",
-      "keywords": [
-        "застосування сили",
-        "обшуки"
-      ]
-    },
-    {
-      "object1": "Павло Демчук",
-      "object2": "ухвалення законопроєкту",
-      "relation_type": "influence",
-      "polarity": "negative",
-      "keywords": [
-        "переслідування",
-        "антикорупційні заходи"
-      ]
-    },
-    {
-      "object1": "НАБУ",
-      "object2": "Семен Кривонос",
-      "relation_type": "leadership",
       "polarity": "neutral",
       "keywords": [
-        "НАБУ",
-        "Директор"
+        "вплив",
+        "відносини"
       ]
     },
     {
-      "object1": "САП",
-      "object2": "Олександр Клименко",
-      "relation_type": "leadership",
-      "polarity": "neutral",
-      "keywords": [
-        "САП",
-        "голова"
-      ]
-    },
-    {
-      "object1": "Президент",
-      "object2": "НАБУ",
-      "relation_type": "influence",
-      "polarity": "negative",
-      "keywords": [
-        "підписувати",
-        "закон",
-        "ограничення"
-      ]
-    },
-    {
-      "object1": "Генпрокурор",
-      "object2": "НАБУ",
-      "relation_type": "influence",
-      "polarity": "negative",
-      "keywords": [
-        "витребувати",
-        "документи",
-        "прокурори"
-      ]
-    },
-    {
-      "object1": "Павло Демчук",
-      "object2": "Президент",
-      "relation_type": "influence",
-      "polarity": "negative",
-      "keywords": [
-        "гальмуватимуться",
-        "справи",
-        "влада"
-      ]
-    },
-    {
-      "object1": "Європейський Союз",
+      "object1": "США",
       "object2": "Україна",
       "relation_type": "influence",
       "polarity": "positive",
       "keywords": [
         "підтримка",
-        "фінансова допомога",
-        "антикорупційна політика"
-      ]
-    },
-    {
-      "object1": "Максим Бужанський",
-      "object2": "президентська партія \"Слуга народу\"",
-      "relation_type": "leadership",
-      "polarity": "neutral",
-      "keywords": [
-        "президентська партія",
-        "лідер"
-      ]
-    },
-    {
-      "object1": "Верховна Рада України",
-      "object2": "законопроєкт № 12414",
-      "relation_type": "influence",
-      "polarity": "negative",
-      "keywords": [
-        "законопроєкт",
-        "влада",
         "вплив"
       ]
     },
     {
-      "object1": "генпрокурор",
-      "object2": "НАБУ",
+      "object1": "Німеччина",
+      "object2": "Україна",
       "relation_type": "influence",
-      "polarity": "negative",
+      "polarity": "positive",
       "keywords": [
-        "генпрокурор",
-        "НАБУ",
-        "контроль"
+        "підтримка",
+        "вплив"
       ]
     },
     {
-      "object1": "САП",
-      "object2": "Офіс генерального прокурора",
+      "object1": "Литва",
+      "object2": "Україна",
+      "relation_type": "influence",
+      "polarity": "positive",
+      "keywords": [
+        "підтримка",
+        "вплив"
+      ]
+    },
+    {
+      "object1": "Франція",
+      "object2": "Україна",
+      "relation_type": "influence",
+      "polarity": "positive",
+      "keywords": [
+        "підтримка",
+        "вплив"
+      ]
+    },
+    {
+      "object1": "Україна",
+      "object2": "НАТО",
+      "relation_type": "influence",
+      "polarity": "positive",
+      "keywords": [
+        "підтримка",
+        "співробітництво"
+      ]
+    },
+    {
+      "object1": "Путін",
+      "object2": "Росія",
+      "relation_type": "leadership",
+      "polarity": "negative",
+      "keywords": [
+        "війна",
+        "диктатор"
+      ]
+    },
+    {
+      "object1": "Україна",
+      "object2": "Люксембург",
+      "relation_type": "influence",
+      "polarity": "positive",
+      "keywords": [
+        "безпека",
+        "угода"
+      ]
+    },
+    {
+      "object1": "Метте Фредеріксен",
+      "object2": "Україна",
+      "relation_type": "influence",
+      "polarity": "positive",
+      "keywords": [
+        "підтримка",
+        "зенітно-ракетні комплекси"
+      ]
+    },
+    {
+      "object1": "Кая Каллас",
+      "object2": "Україна",
+      "relation_type": "influence",
+      "polarity": "positive",
+      "keywords": [
+        "підтримка",
+        "військова допомога"
+      ]
+    },
+    {
+      "object1": "Володимир Зеленський",
+      "object2": "західні союзники",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "критика",
+        "військова допомога"
+      ]
+    },
+    {
+      "object1": "Зеленський",
+      "object2": "Західні союзники",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "критиковал",
+        "військова підтримка"
+      ]
+    },
+    {
+      "object1": "Україна",
+      "object2": "Бельгія",
+      "relation_type": "leadership",
+      "polarity": "positive",
+      "keywords": [
+        "угода",
+        "безпекова співпраця"
+      ]
+    },
+    {
+      "object1": "Едгарс Рінкевичс",
+      "object2": "союзники",
+      "relation_type": "influence",
+      "polarity": "positive",
+      "keywords": [
+        "призвал",
+        "удары по території Росії"
+      ]
+    },
+    {
+      "object1": "Єнс Столтенберг",
+      "object2": "союзники",
+      "relation_type": "leadership",
+      "polarity": "positive",
+      "keywords": [
+        "розглянути можливість",
+        "скасувати обмежень"
+      ]
+    },
+    {
+      "object1": "Джорджія Мелоні",
+      "object2": "члени НАТО",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "виступила проти",
+        "ударів по росії"
+      ]
+    },
+    {
+      "object1": "Зеленський",
+      "object2": "Луиш Монтенегру",
+      "relation_type": "leadership",
+      "polarity": "positive",
+      "keywords": [
+        "двустороннє соглашение",
+        "сфере безпеки"
+      ]
+    },
+    {
+      "object1": "Олаф Шольц",
+      "object2": "НАТО",
+      "relation_type": "leadership",
+      "polarity": "positive",
+      "keywords": [
+        "зміцнення",
+        "стримування Росії"
+      ]
+    },
+    {
+      "object1": "Путін",
+      "object2": "Росія",
+      "relation_type": "leadership",
+      "polarity": "negative",
+      "keywords": [
+        "диктатор",
+        "вложил огромные суммы"
+      ]
+    },
+    {
+      "object1": "Україна",
+      "object2": "США",
+      "relation_type": "influence",
+      "polarity": "positive",
+      "keywords": [
+        "западные боеприпасы",
+        "поддержка"
+      ]
+    },
+    {
+      "object1": "НАТО",
+      "object2": "Україна",
+      "relation_type": "influence",
+      "polarity": "positive",
+      "keywords": [
+        "поддержка",
+        "защита"
+      ]
+    },
+    {
+      "object1": "Путін",
+      "object2": "Україна",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "угроза",
+        "война"
+      ]
+    },
+    {
+      "object1": "США",
+      "object2": "Росія",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "санкции",
+        "оппозиция"
+      ]
+    },
+    {
+      "object1": "НАТО",
+      "object2": "Росія",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "загроза",
+        "вороги"
+      ]
+    },
+    {
+      "object1": "НАТО",
+      "object2": "Китай",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "загроза",
+        "вороги"
+      ]
+    },
+    {
+      "object1": "Єнс Столтенберг",
+      "object2": "НАТО",
       "relation_type": "leadership",
       "polarity": "neutral",
       "keywords": [
-        "САП",
-        "Офіс генерального прокурора",
-        "лідерство"
+        "генеральний секретар",
+        "альянс"
       ]
     },
     {
-      "object1": "Зеленський",
-      "object2": "НАБУ",
-      "relation_type": "leadership",
+      "object1": "Угорщина",
+      "object2": "ЄС",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "відмова",
+        "угода"
+      ]
+    },
+    {
+      "object1": "Україна",
+      "object2": "ЄС",
+      "relation_type": "influence",
       "polarity": "positive",
       "keywords": [
-        "президент",
-        "антикорупційні органи"
+        "допомога",
+        "підтримка"
       ]
     },
     {
-      "object1": "Зеленський",
-      "object2": "САП",
+      "object1": "Росія",
+      "object2": "Україна",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "війна",
+        "агресорка"
+      ]
+    },
+    {
+      "object1": "Путін",
+      "object2": "Україна",
       "relation_type": "leadership",
+      "polarity": "negative",
+      "keywords": [
+        "диктатор",
+        "війна"
+      ]
+    },
+    {
+      "object1": "НАТО",
+      "object2": "Україна",
+      "relation_type": "influence",
       "polarity": "positive",
       "keywords": [
-        "президент",
-        "антикорупційні органи"
+        "підтримка",
+        "зброя"
       ]
     },
     {
-      "object1": "НАБУ",
-      "object2": "САП",
+      "object1": "Європейський Союз",
+      "object2": "Венгрія",
       "relation_type": "influence",
       "polarity": "neutral",
       "keywords": [
-        "антикорупційні органи",
-        "законопроєкт"
+        "соглашение",
+        "допомога"
+      ]
+    },
+    {
+      "object1": "Борис Джонсон",
+      "object2": "Росія",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "звинувачення",
+        "провокація"
+      ]
+    },
+    {
+      "object1": "Туреччина",
+      "object2": "Україна",
+      "relation_type": "influence",
+      "polarity": "positive",
+      "keywords": [
+        "спільні операції",
+        "безпека"
+      ]
+    },
+    {
+      "object1": "НАТО",
+      "object2": "Росія",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "ядерна доктрину",
+        "загроза"
+      ]
+    },
+    {
+      "object1": "Володимир Зеленський",
+      "object2": "Джо Байден",
+      "relation_type": "leadership",
+      "polarity": "neutral",
+      "keywords": [
+        "перемога",
+        "підтримка"
+      ]
+    },
+    {
+      "object1": "Марк Рютте",
+      "object2": "Україна",
+      "relation_type": "influence",
+      "polarity": "positive",
+      "keywords": [
+        "підтримка",
+        "перемога"
+      ]
+    },
+    {
+      "object1": "Путін",
+      "object2": "Захід",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "ослаблення",
+        "заворушень",
+        "загроз"
+      ]
+    },
+    {
+      "object1": "Андерс Фог Расмуссен",
+      "object2": "Путін",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "війна",
+        "заворушень",
+        "загроз"
       ]
     },
     {
       "object1": "Зеленський",
-      "object2": "українське суспільство",
+      "object2": "Туск",
+      "relation_type": "leadership",
+      "polarity": "positive",
+      "keywords": [
+        "угода",
+        "безпека",
+        "співробітництво"
+      ]
+    },
+    {
+      "object1": "Росія",
+      "object2": "Україна",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "війна",
+        "ракетний удар",
+        "громадянські об'єкти"
+      ]
+    },
+    {
+      "object1": "Зеленський",
+      "object2": "Майк Джонсон",
+      "relation_type": "leadership",
+      "polarity": "positive",
+      "keywords": [
+        "підтримка",
+        "саміт",
+        "НАТО"
+      ]
+    },
+    {
+      "object1": "Україна",
+      "object2": "Польща",
+      "relation_type": "leadership",
+      "polarity": "positive",
+      "keywords": [
+        "угода",
+        "безпека",
+        "співробітництво"
+      ]
+    },
+    {
+      "object1": "Зеленський",
+      "object2": "НАТО",
       "relation_type": "influence",
       "polarity": "positive",
+      "keywords": [
+        "підтримка",
+        "саміт",
+        "безпека"
+      ]
+    },
+    {
+      "object1": "Володимир Зеленський",
+      "object2": "Дональд Трамп",
+      "relation_type": "influence",
+      "polarity": "neutral",
+      "keywords": [
+        "співпрацювати",
+        "політична сила"
+      ]
+    },
+    {
+      "object1": "Володимир Зеленський",
+      "object2": "Республіканська партія",
+      "relation_type": "influence",
+      "polarity": "neutral",
+      "keywords": [
+        "співпрацювати",
+        "політична сила"
+      ]
+    },
+    {
+      "object1": "Володимир Зеленський",
+      "object2": "Джо Байден",
+      "relation_type": "leadership",
+      "polarity": "neutral",
       "keywords": [
         "президент",
-        "думка суспільства"
+        "підтримка"
       ]
     },
     {
-      "object1": "Ярослав Железняк",
-      "object2": "НАБУ/САП",
+      "object1": "НАТО",
+      "object2": "Україна",
       "relation_type": "leadership",
       "polarity": "positive",
       "keywords": [
-        "виступав",
-        "проти змін",
-        "законопроєкт"
+        "підтримка",
+        "членство"
       ]
     },
     {
-      "object1": "Таміла Ташева",
-      "object2": "антикорупційні органи",
+      "object1": "Єнс Столтенберг",
+      "object2": "НАТО",
+      "relation_type": "leadership",
+      "polarity": "neutral",
+      "keywords": [
+        "генеральний секретар",
+        "підтримка"
+      ]
+    },
+    {
+      "object1": "Дональд Трамп",
+      "object2": "Україна",
+      "relation_type": "influence",
+      "polarity": "neutral",
+      "keywords": [
+        "війна",
+        "підтримка"
+      ]
+    },
+    {
+      "object1": "Володимир Зеленський",
+      "object2": "Дональд Трамп",
+      "relation_type": "leadership",
+      "polarity": "positive",
+      "keywords": [
+        "допомога",
+        "підтримка"
+      ]
+    },
+    {
+      "object1": "Україна",
+      "object2": "НАТО",
       "relation_type": "influence",
       "polarity": "positive",
       "keywords": [
-        "готова голосувати",
-        "за новий законопроєкт",
-        "виправляти"
+        "підтримка",
+        "безпека"
       ]
     },
     {
-      "object1": "Жан Беленюк",
-      "object2": "НАБУ і САП",
-      "relation_type": "leadership",
-      "polarity": "negative",
-      "keywords": [
-        "Помилився",
-        "відчуваю особисту відповідальність",
-        "виправити ситуацію"
-      ]
-    },
-    {
-      "object1": "протестувальники",
-      "object2": "уряд",
+      "object1": "Росія",
+      "object2": "Україна",
       "relation_type": "influence",
       "polarity": "negative",
       "keywords": [
-        "протестують",
-        "проти скандального законопроєкту",
-        "припинять мітингувати"
+        "війна",
+        "агресія"
+      ]
+    },
+    {
+      "object1": "Латвія",
+      "object2": "Україна",
+      "relation_type": "influence",
+      "polarity": "positive",
+      "keywords": [
+        "допомога",
+        "військова підтримка"
+      ]
+    },
+    {
+      "object1": "Єнс Столтенберг",
+      "object2": "Україна",
+      "relation_type": "leadership",
+      "polarity": "positive",
+      "keywords": [
+        "підтримка",
+        "безпека"
+      ]
+    },
+    {
+      "object1": "Іран",
+      "object2": "Росія",
+      "relation_type": "influence",
+      "polarity": "negative",
+      "keywords": [
+        "ракети",
+        "агресія"
+      ]
+    },
+    {
+      "object1": "Україна",
+      "object2": "Североатлантический альянс",
+      "relation_type": "influence",
+      "polarity": "positive",
+      "keywords": [
+        "оборону",
+        "поддержку"
+      ]
+    },
+    {
+      "object1": "РФ",
+      "object2": "Україна",
+      "relation_type": "leadership",
+      "polarity": "negative",
+      "keywords": [
+        "оккупационные войска",
+        "удары"
+      ]
+    },
+    {
+      "object1": "Украина",
+      "object2": "США",
+      "relation_type": "influence",
+      "polarity": "positive",
+      "keywords": [
+        "импульса",
+        "поддержку"
+      ]
+    },
+    {
+      "object1": "Президент",
+      "object2": "Байден",
+      "relation_type": "leadership",
+      "polarity": "neutral",
+      "keywords": [
+        "план перемоги"
       ]
     }
   ],

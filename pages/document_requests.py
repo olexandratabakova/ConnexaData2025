@@ -71,7 +71,7 @@ layout = html.Div(
                                         id='model-selector',
                                         options=[
                                             {'label': 'llama-3.3-70b-versatile', 'value': 'llama-3.3-70b-versatile'},
-                                            {'label': 'gpt-4o-mini', 'value': 'gpt-4o-mini'},
+                                            {'label': 'gpt-4o-mini-2024-07-18 (the fastest)', 'value': 'gpt-4o-mini-2024-07-18 (the fastest)'},
                                         ],
                                         value=selected_model,
                                         labelStyle=radio_label_style,
@@ -134,7 +134,7 @@ layout = html.Div(
 )
 
 
-def process_text_chunks(file_path, output_dir, request_function, chunk_size=2400):
+def process_text_chunks(file_path, output_dir, request_function, chunk_size=6000):
     global analysis_running, analysis_stop_event, progress
     analysis_running = True
     progress = 0
@@ -197,9 +197,9 @@ def register_callbacks(app):
                 f.write(base64.b64decode(content_string))
 
             text_content = process_uploaded_file(upload_path)
-            if len(text_content) > 30000:
-                os.remove(upload_path)
-                raise ValueError(f"Файл перевищує ліміт у 30000 символів")
+            # if len(text_content) > 30000:
+            #     os.remove(upload_path)
+            #     raise ValueError(f"Файл перевищує ліміт у 30000 символів")
 
             converted_file_path = convert_to_txt(upload_path, upload_dir)
 

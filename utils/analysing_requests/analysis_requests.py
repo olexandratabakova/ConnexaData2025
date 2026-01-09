@@ -10,7 +10,7 @@ languages = "Ukrainian"
 def get_client(model):
     if model == "llama-3.3-70b-versatile":
         return client_groq
-    elif model == "gpt-4o-mini":
+    elif model == "gpt-4o-mini-2024-07-18 (the fastest)":
         return client_openai
     else:
         raise ValueError("Unsupported model")
@@ -20,18 +20,25 @@ def request_related_concepts(text_chunk, model):
     prompt = (
         f"Extract pairs of related concepts from the text. "
         f"Each concept should be described in no more than 3 words. "
-        f"Additionally, include related organizations and speakers"
+        # f"Additionally, include related organizations and speakers"
+        # "Analyze the following text and extract related narratives that reflect "
+        # "Russian propaganda. Each narrative should be concise (up to 5 words). "
+        "For each pair of related narratives, format them as 'concept 1; concept 2'. "
+        # "Include any related organizations or speakers if mentioned. "
+        "Put each pair on a new line. "
         f"Text: {text_chunk}"
+
     )
 
     chat_completion = client.chat.completions.create(
         messages=[
-            {"role": "system", "content": f"Format: 'Concept 1; Concept 2'. Each pair on a new line. Provide the answer in {languages}."},
+            {"role": "system", "content": f"You are an AI assistant that extracts concise narrative pairs "
+                    f"from text for building a semantic map. "
+                    f"Provide the answer in {languages}."},
             {"role": "user", "content": prompt}
         ],
         model=model,
-        temperature=0,
-        max_tokens=1024,
+        max_completion_tokens=4000,
     )
 
     return chat_completion.choices[0].message.content.strip()

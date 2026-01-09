@@ -796,7 +796,5 @@ def register_callbacks(app):
         if n_clicks and n_clicks > 0:
             return {
                 **current_style,
-                'backgroundColor': '#14444C',
-                'transform': 'scale(0.98)'
             }
         return current_style

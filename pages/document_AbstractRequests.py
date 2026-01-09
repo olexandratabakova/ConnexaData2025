@@ -23,13 +23,11 @@ JSON_DIR = os.path.join(PROJECT_ROOT, "processed", "json")
 OUTPUT_DIR = os.path.join(PROJECT_ROOT, "processed", "output")
 FILTERED_OUTPUT_DIR = os.path.join(PROJECT_ROOT, "processed", "filtered_output")
 
-# Create directories if they don't exist
 os.makedirs(TEXT_DIR, exist_ok=True)
 os.makedirs(JSON_DIR, exist_ok=True)
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 os.makedirs(FILTERED_OUTPUT_DIR, exist_ok=True)
 
-# Global variables for analysis
 analysis_running_abstract = False
 analysis_stop_event_abstract = threading.Event()
 progress_abstract = 0
@@ -70,7 +68,6 @@ def create_template_prompt_content(tips_data):
     if not tips_data or not isinstance(tips_data, dict):
         return html.Div("No data to display", style={'color': 'black'})
 
-    # Отримуємо перший елемент з масиву tips, якщо він існує
     if 'tips' in tips_data and isinstance(tips_data['tips'], list) and len(tips_data['tips']) > 0:
         tips_content = tips_data['tips'][0]
     else:
@@ -125,14 +122,11 @@ def save_relations_to_task(task_filename, relations_data, directory=JSON_DIR):
     try:
         file_path = os.path.join(directory, task_filename)
 
-        # Завантажуємо поточні дані завдання
         with open(file_path, 'r', encoding='utf-8') as f:
             task_data = json.load(f)
 
-        # Оновлюємо зв'язки
         task_data["relations"] = relations_data
 
-        # Зберігаємо оновлені дані
         with open(file_path, 'w', encoding='utf-8') as f:
             json.dump(task_data, f, ensure_ascii=False, indent=2)
 
@@ -164,7 +158,6 @@ def process_text_chunks_abstract(file_path, output_dir, tips_data, selected_mode
         if not os.path.exists(FILTERED_OUTPUT_DIR):
             os.makedirs(FILTERED_OUTPUT_DIR)
 
-        # Отримуємо дані з правильної структури
         if 'tips' in tips_data and isinstance(tips_data['tips'], list) and len(tips_data['tips']) > 0:
             tips_content = tips_data['tips'][0]
         else:
@@ -174,7 +167,7 @@ def process_text_chunks_abstract(file_path, output_dir, tips_data, selected_mode
         relationship_types = tips_content.get('relation_types', [])
         keywords = tips_content.get('keywords', [])
 
-        all_relations = []  # Збираємо всі зв'язки тут
+        all_relations = []
 
         with open(output_file_path, "w", encoding='utf-8') as output_file, open(filtered_output_file, "w",
                                                                                 encoding='utf-8') as filtered_file:
@@ -187,18 +180,16 @@ def process_text_chunks_abstract(file_path, output_dir, tips_data, selected_mode
                 try:
                     result = request(chunk, entities_of_interest, relationship_types, keywords, selected_model)
 
-                    # Записуємо результат у файли
                     output_file.write(str(result) + "\n")
                     filtered_file.write(str(result) + "\n")
 
-                    # Додаємо зв'язки до загального списку
                     if hasattr(result, 'relations'):
                         for relation in result.relations:
                             relation_dict = {
                                 "object1": relation.object1,
                                 "object2": relation.object2,
                                 "relation_type": relation.relation_type,
-                                "polarity": relation.polarity.value,  # Конвертуємо Enum у string
+                                "polarity": relation.polarity.value,
                                 "keywords": relation.keywords
                             }
                             all_relations.append(relation_dict)
@@ -207,7 +198,6 @@ def process_text_chunks_abstract(file_path, output_dir, tips_data, selected_mode
                     print(f"Processed chunk {i + 1}/{total_chunks} - Progress: {progress_abstract}%")
                     print(f"Using model: {selected_model}")
 
-                    # Small delay to prevent overwhelming the system
                     time.sleep(0.1)
 
                 except Exception as e:
@@ -215,7 +205,6 @@ def process_text_chunks_abstract(file_path, output_dir, tips_data, selected_mode
                     output_file.write(f"Error processing chunk: {str(e)}\n")
                     continue
 
-        # Зберігаємо всі зв'язки у файл завдання
         if all_relations and not analysis_stop_event_abstract.is_set():
             save_relations_to_task(task_filename, all_relations)
             print(f"✅ Saved {len(all_relations)} relations to task file")
@@ -335,6 +324,7 @@ layout = html.Div(
                                 options=[
                                     {'label': 'llama-3.3-70b-versatile (fast)', 'value': 'llama-3.3-70b-versatile'},
                                     {'label': 'qwen3:latest (slower)', 'value': 'qwen3:latest'},
+                                    {'label': 'gpt-4o-mini-2024-07-18 (the fastest)', 'value': 'gpt-4o-mini-2024-07-18'},
                                 ],
                                 value=selected_model,
                                 labelStyle=radio_label_style,
@@ -396,11 +386,21 @@ layout = html.Div(
                                     "Stop Analysis",
                                     id="stop-analysis-button-abstract",
                                     style={
-                                        **button_style,
-                                        'backgroundColor': '#dc3545',
-                                        'border': 'none',
-                                        'marginTop': '10px',
-                                        'display': 'none'
+                                        'padding': '15px 30px',
+                                        'fontSize': '18px',
+                                        'borderRadius': '30px',
+                                        'backgroundColor': '#E2F9FB',
+                                        'color': '#1B5E67',
+                                        'textDecoration': 'none',
+                                        'marginTop': '20px',
+                                        'marginBottom': '20px',
+                                        'margin': '20px',
+                                        'display': 'inline-block',
+                                        'fontFamily': 'Helvetica',
+                                        'fontWeight': 'bold',
+                                        'textAlign': 'center',
+                                        'border': '2px solid rgba(226, 249, 251, 0.5)',
+                                        'boxShadow': '0 0 30px 10px #E2F9FB',
                                     }
                                 )
                             ]
@@ -477,8 +477,8 @@ def register_callbacks(app):
                     truncated_filename = selected_file[:27] + "..."
 
                 file_info = html.Div([
-                    html.Div(f"📄 {truncated_filename}", style={'fontWeight': 'bold', 'marginBottom': '5px'}),
-                    html.Div(f"📝 {word_count} words | 🔤 {character_count} chars",
+                    html.Div(f" {truncated_filename}", style={'fontWeight': 'bold', 'marginBottom': '5px'}),
+                    html.Div(f" {word_count} words | {character_count} chars",
                              style={'fontSize': '12px', 'color': colors['gray_text']})
                 ])
 
@@ -726,7 +726,6 @@ def register_callbacks(app):
             print(f"Error: {e}")
             return error_message, "danger", True, no_update
 
-    # Callback для збереження вибраної моделі
     @app.callback(
         Output('model-store', 'data'),
         Input('model-selector', 'value')
